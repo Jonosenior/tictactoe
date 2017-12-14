@@ -24,5 +24,4 @@ I'm excited to write my first working game in Ruby. I hope to better understand 
 I found the differe
 
 ## Features to add
-  1. Screenshot of the game in this README.
-  3. AI so that you can play against the computer.
+  1. AI so that you can play against the computer.
