@@ -1,8 +1,3 @@
-
-# The Board object stores the game board (as a 2-D array), displays the board for the user,
-# checks if a move is legitimate, changes the board based on input from the Game object,
-# and checks if a game is won or drawn.
-
 class Board
   attr_reader :board
 
@@ -30,7 +25,8 @@ class Board
     @board.flatten.include?(move.to_i)
   end
 
-  def is_it_a_draw?
+  def is_it_a_draw?(current_player)
+    return false if any_winning_lines?(current_player)
     @board.each { |subarray| return false if (subarray.any? {|x| x.class == Fixnum})}
     true
   end

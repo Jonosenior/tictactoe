@@ -20,7 +20,7 @@ def play_game
     @game.ask_user_for_move
     @game.verify_input
     @board.place_move(@game.current_player.marker, @game.move.to_i)
-    if @board.is_it_a_draw? || @board.any_winning_lines?(@game.current_player)
+    if @board.is_it_a_draw?(@game.current_player) || @board.any_winning_lines?(@game.current_player)
       @board.display_board
       break
     end
