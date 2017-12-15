@@ -1,4 +1,4 @@
-require_relative 'spec_helper'
+require File.expand_path("../../lib/board", __FILE__)
 
 describe Board do
   subject(:board) { Board.new }
